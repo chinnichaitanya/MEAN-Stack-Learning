@@ -1,1 +1,1 @@
-# mean_learning
+# MEAN framework implementation 
