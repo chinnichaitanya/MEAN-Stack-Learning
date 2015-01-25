@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= heading %></h1>
+    <form id='registration_form' method='POST' action='/adduser'>
+    	<input id='registration_name' placeholder='Username' type='text' name='name'>
+    	<input id='registration_email' placeholder='Email ID' type='email' name='email'>
+    	<button id='registration_submit' type='submit'>Submit</button>
+    </form>
+  </body>
+</html>
