@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			<%= title %>
+		</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	</head>
+	<body>
+		<div>
+			<h2> <%= title %> </h2>
+			<p><u> Old Name </u> : <%= oldContent[0].name %> </p>
+			<p><u> Old Content </u> : <%= oldContent[0].content %> </p>
+		</div>
+		<div>
+			<form method='POST' action='/update/<%= oldContent[0]._id %>'>
+				<u> New Name </u> : <input type='text' name='Name_new' placeholder='Enter task name' /> 
+					<br /> <br />
+				<u> New Content </u> : <textarea type='text' name='Content_new' placeholder='Enter task details'> </textarea>
+					<br /> <br />
+				<input type='submit' id='submit' />
+				<a href="/list"> Pending tasks </a>
+				<span>&nbsp;&nbsp;&nbsp;</span>
+<!-- 				<a href="/list/0"> Pending tasks </a>
+				<span>&nbsp;&nbsp;&nbsp;</span>
+				<a href="/list/1"> Completed tasks </a>
+				<span>&nbsp;&nbsp;&nbsp;</span>
+ -->				<a href="/todo"> Add a new task ? </a>
+				<span>&nbsp;&nbsp;&nbsp;</span>
+				<a href="/"> Go to homepage ? </a>				
+			</form>
+		</div>
+
+		<footer>
+			<p> Coded by Chinni Chaitanya </p>
+		</footer>
+	<script type="text/javascript"></script>
+	</body>
+</html>

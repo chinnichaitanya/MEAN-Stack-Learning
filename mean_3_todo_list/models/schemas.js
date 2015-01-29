@@ -12,7 +12,8 @@ var todoSchema = new Schema({
 	updatedAt: {
 		type: Date,
 		default: Date.now()
-	}
+	},
+	done: Boolean
 });
 
 var todo = mongoose.model('todo', todoSchema);

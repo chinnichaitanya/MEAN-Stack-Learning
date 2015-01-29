@@ -17,16 +17,24 @@
 						<th> Task Details </th>
 						<th> Task Created </th>
 						<th> Last Updated </th>
+						<th> Delete ? </th>
+						<th> Mark as completed ? </th>
+						<th> Edit ? </th>
 					</thead>
 					<tbody>
 						<% for(var i=0; i<content.length; i++) { %>
-							<tr>
-								<td><%= content[i]._id %></td>
-								<td><%= content[i].name %></td>
-								<td><%= content[i].content %></td>
-								<td><%= content[i].createdAt %></td>
-								<td><%= content[i].updatedAt %></td>
-							</tr>
+							<% if(content[i].done == 0) { %>
+								<tr>
+									<td><%= content[i]._id %></td>
+									<td><%= content[i].name %></td>
+									<td><%= content[i].content %></td>
+									<td><%= content[i].createdAt %></td>
+									<td><%= content[i].updatedAt %></td>
+									<td> <a href="/deleteTask/<%= content[i]._id %>"> Delete ? </a> </td>
+									<td> <a href="/markDone/<%= content[i]._id %>"> Mark as completed ? </a> </td>
+									<td> <a href="/edit/<%= content[i]._id %>"> Edit ? </a> </td>
+								</tr>
+							<% } %>
 						<% } %>
 					</tbody>
 					<!-- <tfoot>
