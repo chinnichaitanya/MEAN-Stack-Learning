@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			<%= title %>
+		</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/mystyle.css">
+	</head>
+	<body>
+		<div id='wrapper'>
+			<h2> <%= title %> </h2>
+			<div id='userList'>
+				<table>
+					<thead>
+						<th> Task ID </th>
+						<th> Task Name </th>
+						<th> Task Details </th>
+						<th> Task Created </th>
+						<th> Last Updated </th>
+					</thead>
+					<tbody>
+						<% for(var i=0; i<content.length; i++) { %>
+							<tr>
+								<td><%= content[i]._id %></td>
+								<td><%= content[i].name %></td>
+								<td><%= content[i].content %></td>
+								<td><%= content[i].createdAt %></td>
+								<td><%= content[i].updatedAt %></td>
+							</tr>
+						<% } %>
+					</tbody>
+					<!-- <tfoot>
+						Coded by Chinni Chaitanya ???
+					</tfoot> -->
+				</table>
+			</div>
+			<a href="/todo"> Add a new task ? </a>
+			<span>&nbsp;&nbsp;&nbsp;</span>
+			<a href="/"> Go to homepage ? </a>
+		</div>
+	
+		<footer>
+			<p> Coded by Chinni Chaitanya </p>
+		</footer>
+	<script type="text/javascript"></script>
+	</body>
+</html>
