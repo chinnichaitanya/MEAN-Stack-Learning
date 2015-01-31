@@ -1,0 +1,19 @@
+<% include ../partials/header %>
+
+	<h2> Welcome to <%= title %> </h2>
+	<form action='/create' method='POST'>
+		<input type='text' name='Name' placeholder='Enter task name' /> 
+			<br /> <br />
+		<textarea type='text' name='Content' placeholder='Enter task details'> </textarea>
+			<br /> <br />
+		<input type='submit' id='submit' />
+		<a href="/list"> Pending tasks </a>
+		<span>&nbsp;&nbsp;&nbsp;</span>
+<!-- 		<a href="/list/0"> Pending tasks </a>
+		<span>&nbsp;&nbsp;&nbsp;</span>
+		<a href="/list/1"> Completed tasks </a>
+		<span>&nbsp;&nbsp;&nbsp;</span>
+ -->		<a href="/"> Go to homepage ? </a>
+	</form>
+	
+<% include ../partials/footer %>
