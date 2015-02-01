@@ -13,7 +13,7 @@ var mongoose = require('mongoose');
 var indexRoutes = require('./routes/index');
 var usersRoutes = require('./routes/users');
 
-mongoose.connect('mongodb://localhost/todo_project');
+mongoose.connect('mongodb://localhost/todo_ugrade');
 var db = mongoose.connection;
 db.on('error', function () {
     console.log('MongoDB connection error. Check configs');
@@ -42,11 +42,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Making our db accessible to our router
-app.use(function(req, res, next) {
-    req.db = db;
-    next();
-});
+// // Making our db accessible to our router
+// app.use(function(req, res, next) {
+//     req.db = db;
+//     next();
+// });
 
 app.use('/', indexRoutes);
 app.use('/users', usersRoutes);

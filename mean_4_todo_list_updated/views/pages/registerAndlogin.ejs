@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> <%= title_1 %> | <%= title_2 %> </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1> <%= title_1 %> </h1>
+    <form method='POST' action='/users/createUser'>
+      <input type='text'  name='userName' placeholder='Username' />
+        <br /> <br />
+      <input type='email' name='userEmail' placeholder='Email ID' />
+        <br /> <br />
+      <input type='password' name='userPassword' placeholder='Password (min-8 max-16 chars)' />
+        <br /> <br />
+      <input type='submit' name='submit' />
+    </form>
+
+    <h1> <%= title_2 %> </h1>
+    <form method='POST' action='/users/show'>
+      <input type='email' name='userEmail_' placeholder='Email ID' />
+        <br /> <br />
+      <input type='password' name='userPassword_' placeholder='Password (min-8 max-16 chars)' />
+        <br /> <br />
+      <input type='submit' name='submit_' />
+    </form>
+  </body>
+</html>
