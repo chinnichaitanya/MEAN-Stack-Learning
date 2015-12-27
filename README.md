@@ -1,2 +1,2 @@
-# MEAN framework implementation 
-My own small projects to get used to MEAN stack
+## MEAN Stack Learning 
+Collection of my own small projects developed by me while learning to MEAN stack
